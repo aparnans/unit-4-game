@@ -1,0 +1,51 @@
+html{
+    background-image: url("http://www.scalsys.com/backgrounds/crystal-backgrounds/crystal-backgrounds_202449.jpg");
+    /* http://www.scalsys.com/backgrounds/crystal-backgrounds/crystal-backgrounds_202449.jpg */
+}
+h1 {
+    text-align: center;
+    color:coral;
+    font-weight: bold;
+    font-size:50px;
+}
+
+#totalNumber{
+    font-weight:bold;
+    font-size:30px;
+    color:blueviolet;
+    margin-top:130px;
+
+    margin-left: 40px;
+    
+}
+
+ userwinslosses{
+    display:flexbox;
+    flex-direction: row;
+  
+} 
+
+#wins, #losses {
+    color:darkorchid;
+
+    font-weight: bolder;
+    font-size:20px;
+
+    margin-right:90px;
+    margin-top:20px;
+
+    padding:20px;
+
+    float:right;
+}
+fourCrystals{
+    display:flexbox;
+    position: absolute;
+    bottom : 100px;
+    
+}
+
+.crystals{
+    
+    margin-left:140px;
+}
