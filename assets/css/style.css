@@ -1,3 +1,4 @@
+
 html{
     background-image: url("http://www.scalsys.com/backgrounds/crystal-backgrounds/crystal-backgrounds_202449.jpg");
     /* http://www.scalsys.com/backgrounds/crystal-backgrounds/crystal-backgrounds_202449.jpg */
@@ -48,4 +49,14 @@ fourCrystals{
 .crystals{
     
     margin-left:140px;
+    
+}
+
+lavendarButton{
+    opacity: 0.5;
+    color:darkcyan;
+    position: absolute;
+    bottom : 100px;
+    margin-left:140px;
+    width:20px;
 }

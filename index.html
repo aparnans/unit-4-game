@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
-    <link rel= "stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="assets/css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Crystal Collector</h1>
 
-    <h3 id = "totalNumber">Total Number:</h3>
+    <script defer src="assets/javascript/game.js"></script>
 
-    <userwinslosses>
-        <div id = "wins">Wins: </div>
-        <div id = "losses">Losses: </div>
-    </userwinslosses>
+    <div class="container">
+        <h1>Crystal Collector</h1>
 
-    <fourCrystals>
-        <img class = "crystals" id= "lavendar" src="assets/images/lavendar.jpg">
-        <img class = "crystals" id= "red" src="assets/images/red.jpg">
-        <img class = "crystals" id = "yellow" src="assets/images/yellow.jpg">
-        <img class = "crystals" id= "green" src="assets/images/green.png">
-    </fourCrystals>
+        <h3 id="totalNumber">total number : </h3>
 
+        <userwinslosses>
+            <div id="wins">Wins: </div>
+            <div id="losses">Losses: </div>
+        </userwinslosses>
+
+
+
+        <fourCrystals>
+            <imgContainer>
+                <button id = "lavenderButton" >
+                    <img class="crystals" id="lavendar" src="assets/images/lavendar.jpg">
+                </button>
+            </imgContainer>
+            
+            
+            
+            <!---<img class="crystals" id="red" src="assets/images/red.jpg">
+            <img class="crystals" id="yellow" src="assets/images/yellow.jpg">
+            <img class="crystals" id="green" src="assets/images/green.png">--->
+        </fourCrystals>
+
+        <button id="start">START/RESET</button>
+    </div>
 
 </body>
+
 </html>
