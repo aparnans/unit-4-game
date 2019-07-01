@@ -39,6 +39,7 @@ h1 {
 
     float:right;
 }
+
 fourCrystals{
     display:flexbox;
     position: absolute;
@@ -52,11 +53,11 @@ fourCrystals{
     
 }
 
-lavendarButton{
-    opacity: 0.5;
-    color:darkcyan;
+lavenderButton{
+    border:1px solid darkcyan;
     position: absolute;
     bottom : 100px;
     margin-left:140px;
     width:20px;
 }
+

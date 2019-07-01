@@ -3,66 +3,142 @@
 // Variable to store random total number
 var totalRandomNum;
 var userTotal=0;
+var wins = 0;
+var losses = 0;
 
 // Variables to store ramdom numbers for Crystals
-var lavendarNum;
+var lavenderNum;
 var redNum;
 var yellowNum;
 var greenNum;
 
 // start/reset function
 var startReset = function(){
+    
     totalRandomNum = Math.floor(Math.random()*99);
+    userTotal =0;
 
-    lavendarNum= Math.floor(Math.random()*12);
-    redNum= Math.floor(Math.random()*12);
-    yellowNum= Math.floor(Math.random()*12);
-    greenNum= Math.floor(Math.random()*12);
+    lavenderNum= Math.floor(Math.random()*12) + 1;
+    redNum= Math.floor(Math.random()*12) + 1;
+    yellowNum= Math.floor(Math.random()*12) + 1;
+    greenNum= Math.floor(Math.random()*12) + 1;
 
-    // console.log(totalRandomNum);
-    // console.log(lavendarNum);
-    // console.log(redNum);
-    // console.log(totalRandomNum);
-    // console.log(yellowNum);
-    //console.log("totalRandomNumber: ", totalRandomNum)
+    console.log("totalRandomNumber: ", totalRandomNum)
+    console.log(lavenderNum);
+    console.log(redNum);
+    console.log(totalRandomNum);
+    console.log(yellowNum);
     $("#totalNumber").text("Total Number : "+ totalRandomNum);
     
-    // assign
-
-    //console.log($("#lavendarButton").attr("value"));
-    
-    
-
-    $("#red").attr("value", redNum);
-    $("#yellow").attr("value", yellowNum);
-    $("#green").attr("value", greenNum);
+    // assign attribute values to crystals
+    $("#lavenderButton").attr("value", lavenderNum);
+    $("#redButton").attr("value", redNum);
+    $("#yellowButton").attr("value", yellowNum);
+    $("#greenButton").attr("value", greenNum);
 
 }   
 
 startReset();
 
-console.log(lavendarNum);
-$("#lavenderButton").attr("value", lavendarNum);
+$("start").on("click", function(){
+    startReset();
+});
 
-//var lav = document.getElementById("#lavenderButton");
-
-//lav.setAttribute("value","50");
+console.log("Attribute Value " +$("#lavenderButton").attr("value"));
 
 
-console.log($("#lavenderButton").attr("value"));
-
-var assignNum= function(idname,p_num){
+ $("#lavenderButton").click(function(){
     
-    console.log("in click");
-    console.log("type of userTotal : "+typeof(userTotal));
-
-    console.log("type of pnum : "+typeof(p_num));
+    num = $("#lavenderButton").attr("value");
+    userTotal = userTotal + parseInt(num);    
     
-    userTotal = userTotal + parseInt(p_num);
-    
-    console.log("userTotal : "+userTotal);
+    if(userTotal===totalRandomNum) // this is a win
+    {
+        wins++;        
+        $("#wins").text("Wins: "+wins);
+        startReset();
+    }
+    else if(userTotal > totalRandomNum) // this is a loss
+    {
+        losses++;
+        $("#losses").text("Losses: "+losses);        
+        startReset();
+    }
+    else
+    {
+        null;
+    }
+}); 
 
+$("#redButton").click(function(){
     
-}
-
- $("#lavendarButton").on("click", assignNum("a","4"));
+    num = $("#redButton").attr("value");
+    userTotal = userTotal + parseInt(num);    
+    
+    if(userTotal===totalRandomNum) // this is a win
+    {
+        wins++;        
+        $("#wins").text("Wins: "+wins);
+        console.log("in wins  : "+wins);
+        startReset();
+    }
+    else if(userTotal > totalRandomNum) // this is a loss
+    {
+        losses++;
+        $("#losses").text("Losses: "+losses);
+        console.log("in losses : "+losses);        
+        startReset();
+    }
+    else
+    {
+        null;
+    }
+}); 
+$("#yellowButton").click(function(){
+    
+    num = $("#yellowButton").attr("value");
+    userTotal = userTotal + parseInt(num);    
+    
+    if(userTotal===totalRandomNum) // this is a win
+    {
+        wins++;        
+        $("#wins").text("Wins: "+wins);
+        console.log("in wins  : "+wins);
+        startReset();
+    }
+    else if(userTotal > totalRandomNum) // this is a loss
+    {
+        losses++;
+        $("#losses").text("Losses: "+losses);
+        console.log("in losses : "+losses);        
+        startReset();
+    }
+    else
+    {
+        null;
+    }
+}); 
+$("#greenButton").click(function(){
+    
+    num = $("#greenButton").attr("value");
+    userTotal = userTotal + parseInt(num);    
+    
+    if(userTotal===totalRandomNum) // this is a win
+    {
+        wins++;        
+        $("#wins").text("Wins: "+wins);
+        console.log("in wins  : "+wins);
+        startReset();
+    }
+    else if(userTotal > totalRandomNum) // this is a loss
+    {
+        losses++;
+        $("#losses").text("Losses: "+losses);
+        console.log("in losses : "+losses);        
+        startReset();
+    }
+    else
+    {
+        null;
+    }
+}); 
