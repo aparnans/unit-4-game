@@ -1,6 +1,7 @@
 
-html{
+body{
     background-image: url("http://www.scalsys.com/backgrounds/crystal-backgrounds/crystal-backgrounds_202449.jpg");
+    background-size: 100%;
 }
 h1 {
     text-align: center;
@@ -9,34 +10,42 @@ h1 {
     font-size:50px;
 }
 
+.container{
+    display:flex;
+    justify-content:space-around;    
+}
+
 #rules{
-    position:absolute;
-    top:40px;
-    right:70px;
-    justify-content: right;
-    width:300px;
+    margin-top:25px;
+    margin-left:0px;
+    
+    width:350px;
     color :darkmagenta;
     font-style: italic;
     font-size: 130%;
     font-weight:bolder;
-    padding:50px;
-    border: 2px solid #704697;border-radius: 12px;padding:2px;
+    border: 2px solid #704697;border-radius: 5px;padding:2px;
 }
+
+#userwinslosses{
+    margin-top:30px;
+    
+ } 
+
 #totalNumber, #userTotal{
     font-weight:bold;
     font-size:30px;
     color:blueviolet;
-    margin-top:130px;
-    /*float:left;*/
+    
+    margin-top:50px;
+    margin-right:160px;
+    
  }
 
  #userTotal{
      opacity: 0.0;
  }
 
- userwinslosses{
-    display:flexbox;
- } 
 
 #wins, #losses {
     color:darkorchid;
@@ -44,25 +53,18 @@ h1 {
     font-weight: bolder;
     font-size:20px;
 
-    margin-right:90px;
-    margin-top:20px;
-
-    padding:20px;
-
-    float:right;
+    margin-top:10px;
 }
 
-fourCrystals{
+crystalContainer{
     display:flexbox;
-    position: absolute;
-    bottom : 150px;
-    
+    justify-content:space-between;
 }
 
 .crystals{
     
-    margin-left:140px;
-
+    margin-left:180px;
+    margin-top:20px;    
 }
 
 img:hover {
@@ -84,18 +86,13 @@ img:hover {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-lavenderButton{
-    border:1px solid darkcyan;
-    position: absolute;
-    /*bottom : 120px;*/
-    margin-left:140px;
-    width:20px;
-}
 
 #start{
     position:absolute;
     bottom:30px;
-    right:50%;
+    right:45%;
+
+    
 
     background-color:lightpink;
     color:blueviolet;
@@ -104,10 +101,6 @@ lavenderButton{
     font-size:20px;
 
     padding:10px;
-    /*padding-top:10px;
-    padding-bottom:10px;
-    padding-left:10px;
-    padding-right:10px;*/
-
+  
     
 }

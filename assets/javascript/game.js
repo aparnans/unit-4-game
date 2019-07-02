@@ -21,10 +21,15 @@ var startReset = function(){
 
     // reset wins ,losses only in case of start/reset
     // and not when user wins or loses
+    console.log(winLoss);
     if( !winLoss )
     {
+
         wins=0;
         losses=0;
+        $("#wins").text("Wins: "+wins);
+        $("#losses").text("Losses: "+losses);
+        
     }
     else
     {
