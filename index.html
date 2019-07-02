@@ -18,28 +18,31 @@
 
     <div class="container">
         <h1>Crystal Collector</h1>
-
-        <h3 id="totalNumber">total number : </h3>
-
+        <p id="rules">
+            You will be given a random number (Total Number). 
+            There are four crystals on the page. 
+            Each crystal has a specific value assigned to it.
+            When you click on a crystal, its value will be added 
+            to User Total. 
+            You will win the game if you match the User Total to the Total Number.
+            You will lose the game if the User Total goes beyond the the Total Number.
+            You can restart the game any time by clicking Start/Reset button.
+        </p>
+        
         <userwinslosses>
+            <div id="totalNumber">Total Number: </div>
+            <div id= "userTotal">User Total: </div>
             <div id="wins">Wins: </div>
             <div id="losses">Losses: </div>
         </userwinslosses>
 
 
 
-        <fourCrystals class = "crystalButtons">crystals
-            <!---<imgContainer>-->
-            <!---<button id = "lavenderButton" > </button>-->
-                <img class="crystals" id="lavenderButton" src="assets/images/lavendar.jpg">
-                <!--</button>
-            </imgContainer>--->
+        <fourCrystals class = "crystalButtons">
+            <img class="crystals" id="lavenderButton" src="assets/images/lavendar.jpg">
             <img class="crystals" id="redButton" src="assets/images/red.jpg">
             <img class="crystals" id="yellowButton" src="assets/images/yellow.jpg">
             <img class="crystals" id="greenButton" src="assets/images/green.png">
-            
-            
-            
         </fourCrystals>
 
         <button id="start">START/RESET</button>
