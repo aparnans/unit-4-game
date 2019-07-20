@@ -42,6 +42,7 @@ h1 {
     
  }
 
+
  #userTotal{
      opacity: 0.0;
  }
@@ -89,10 +90,8 @@ img:hover {
 
 #start{
     position:absolute;
-    bottom:30px;
-    right:45%;
-
-    
+    top:50%;
+    right:50%; 
 
     background-color:lightpink;
     color:blueviolet;
@@ -103,4 +102,28 @@ img:hover {
     padding:10px;
   
     
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    crystalContainer{
+        display:flexbox;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    
+
+    .crystals{
+        margin-left:0px;
+        margin-top:0px;
+    }
+
+    #start{
+        
+        margin-top:70%;
+        margin-left:0px;
+        
+                  
+         
+    }    
 }
